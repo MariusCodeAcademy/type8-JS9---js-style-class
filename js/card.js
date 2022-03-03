@@ -9,10 +9,10 @@ btnNightEl.addEventListener('click', makeNightModeOn);
 
 function makeNightModeOn() {
   console.log('btn click detected');
+  // 3. cardEl keiciam style savybes. fono spalva ir spalva
   cardEl.style.backgroundColor = 'black';
   cardEl.style.color = 'white';
 }
-// 3. cardEl keiciam style savybes. fono spalva ir spalva
 
 // prisideti mygtuka Day mode ir pakeisti spalvas atgal i dienos
 
