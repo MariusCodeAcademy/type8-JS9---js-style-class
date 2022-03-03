@@ -4,14 +4,30 @@
 // 1. nusitaikom i button el ir card el
 const cardEl = document.querySelector('.card');
 const btnNightEl = document.querySelector('#night');
+const btnDayEl = document.querySelector('#day');
+
 // 2. btnEl dedam eventlistener. kai paspaudziam ant btn
-btnNightEl.addEventListener('click', makeNightModeOn);
+btnNightEl.addEventListener('click', toggleNight);
+btnDayEl.addEventListener('click', toggleNight);
 
 function makeNightModeOn() {
   console.log('btn click detected');
   // 3. cardEl keiciam style savybes. fono spalva ir spalva
-  cardEl.style.backgroundColor = 'black';
-  cardEl.style.color = 'white';
+  // cardEl.style.backgroundColor = 'black';
+  // cardEl.style.color = 'white';
+  // classList
+  cardEl.classList.add('naktis');
+}
+
+function makeDayModeOn() {
+  // cardEl.style.backgroundColor = 'white';
+  // cardEl.style.color = 'black';
+  // classList
+  cardEl.classList.remove('naktis');
+}
+
+function toggleNight() {
+  cardEl.classList.toggle('naktis');
 }
 
 // prisideti mygtuka Day mode ir pakeisti spalvas atgal i dienos
